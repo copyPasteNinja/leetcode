@@ -6,9 +6,7 @@ def longest_pref(words):
                 break
             else:
                 short = short[:-1]
-
     return short
 
-
-# longest_pref(words=['flower', 'flow', 'flight'])
+print(longest_pref(words=['flower', 'flow', 'flight', 'flour']))
 
