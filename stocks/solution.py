@@ -13,4 +13,21 @@ def stocks(prices):
 
     print(profit)
 
-stocks(prices=[7,3,4,6,1])
+# stocks(prices=[7,3,4,6,1])
+
+## way better solution
+def stock(prices):
+    n = len(prices)
+    m1 = prices[0]
+    m2 = 0
+    # print(n, m1, m2)
+    for i in range(1, n):
+        if m1 > prices[i]:
+            m1 = prices[i]
+        
+        if m2 < (prices[i] - m1):
+            m2 = prices[i] - m1
+
+    return m2     
+
+print(stock(prices=[7,3,4,6,1]))
